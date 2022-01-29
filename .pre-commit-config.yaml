@@ -1,0 +1,38 @@
+repos:
+  - repo: https://github.com/psf/black
+    rev: 22.1.0
+    hooks:
+      - id: black
+        language_version: python3.9
+  - repo: https://github.com/pycqa/flake8
+    rev: 4.0.1
+    hooks:
+      - id: flake8
+        name: flake8 (black)
+        additional_dependencies:
+          - flake8-bugbear
+          - flake8-debugger
+        args:
+          # Black config
+          - "--extend-ignore=E203"
+          - "--max-line-length=88"
+  - repo: https://github.com/pycqa/isort
+    rev: 5.10.1
+    hooks:
+      - id: isort
+        name: isort (black)
+        args:
+          # Black config
+          - "--profile=black"
+          # So docker doesn't change file permissions
+          - "--overwrite-in-place"
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: v8.8.0
+    hooks:
+      - id: eslint
+        args:
+          - "--fix"
+        additional_dependencies:
+          -   eslint@8.8.0
+          -   eslint-plugin-promise@6.0.0
+          -   eslint-plugin-standard@5.0.0
