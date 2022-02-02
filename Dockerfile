@@ -9,6 +9,7 @@ RUN git init . && \
     pre-commit install-hooks --config /config/.pre-commit-config.yaml && \
     rm -rf .git/
 
+
 WORKDIR /src
 
 ENTRYPOINT ["pre-commit", "run", "--config", "/config/.pre-commit-config.yaml"]
