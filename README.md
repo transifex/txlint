@@ -18,7 +18,8 @@ It consists of three parts:
 ```bash
 docker run --rm \
     --mount src="$(pwd)",target=/src,type=bind \
-    transifex/txlint-py file_1.py /path/to/file_2.py
+    transifex/txlint-py --files \
+    file_1.py /path/to/file_2.py
 ```
 
 ### Lint current branch
