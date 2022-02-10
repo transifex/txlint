@@ -2,15 +2,15 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-An opinionated Python linter for Transifex Projects
+An opinionated linter for Transifex Projects
 
-It consists of three parts:
+It consists of the following parts:
 * <a href="https://black.readthedocs.io/en/stable/">black - Code Formater</a>
 * <a href="https://flake8.pycqa.org/en/latest/">flake8 - Linter</a>
     * <a href="https://github.com/PyCQA/flake8-bugbear">bugbear - Plugin</a>
     * <a href="https://github.com/JBKahn/flake8-debugger">debugger - Plugin</a>
 * <a href="#isort">isort - Import shorter</a></li>
-
+* <a href="https://https://github.com/eslint/eslint">eslint - JS linter</a>
 ## How to use
 
 ### Lint specific files

@@ -26,3 +26,16 @@ repos:
       - "--profile=black"
       # So docker doesn't change file permissions
       - "--overwrite-in-place"
+- repo: https://github.com/pre-commit/mirrors-eslint
+  rev: v8.8.0
+  hooks:
+  -   id: eslint
+      additional_dependencies:
+      -   eslint@8.8.0
+      -   eslint-plugin-promise@6.0.0
+      -   eslint-plugin-standard@5.0.0
+      exclude: >
+        (?x)^(
+          transifex/static/js/editor_old/.*|
+          transifex/static/plugins/.*
+        )$
