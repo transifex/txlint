@@ -1,4 +1,5 @@
 build:
-	docker build \
-		-f ./Dockerfile \
-		-t txlint:latest .
+	docker buildx build \
+		--platform linux/amd64,linux/arm64 \
+		--push \
+		-t transifex/txlint:latest .
